@@ -1,0 +1,113 @@
+% !TeX spellcheck = en_GB
+%Document Setttings
+\documentclass[leqno]{extarticle} %extended report class, option leqno globally sets equation nummeration to left side
+\usepackage[a4paper]{geometry} % page sizing
+\usepackage[]{fancyhdr} %fancyheader
+\counterwithin*{section}{part} % makes sections count within parts
+
+% Header and Footer Style
+\pagestyle{fancy} % General page style
+\fancyhf{} % specifies the use of fancy header and footer
+\setlength{\footskip}{80pt}
+\cfoot{\thepage} % adds page numbering in center of footer
+\rfoot{\includegraphics[scale=0.06]{./images/WE}} %adds faculty logo on the right of footer
+\renewcommand{\footrulewidth}{0.4pt}% redefines the footer line width to be 0.4pt is 0pt default
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{pbox}
+\usepackage{enumitem}
+
+%Font Block
+\usepackage[T1]{fontenc} %allows encode non-english characters as single glyphs
+\usepackage[utf8]{inputenc} %allows for correct reading of input non-english characters
+\usepackage{lmodern} % a font package to prevent some conflicts
+\DeclareUnicodeCharacter{2212}{-} %fancy minus
+\usepackage{tabto} % Allows custum tabulation
+\usepackage{blindtext} %Lorem Ipsum
+
+
+% Figure Block
+\usepackage{graphicx} % adding graphic files
+\graphicspath{ {./images/} } % Graphics path location
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+\usepackage{float} % More figure placement options
+\usepackage{wrapfig} % Wrapping text around figures
+\usepackage{subcaption} %adding subfigures
+\usepackage{svg} % so i can insert nice and cool svg graphs made in google drawings
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+
+\usepackage{hyperref} % allows references with hyperlinks
+\usepackage{tabularx}
+
+% Table Formatting
+    \hypersetup{
+        colorlinks=true,
+        linkcolor=blue,
+        filecolor=magenta,      
+        urlcolor=cyan,
+        pdftitle={Traction Lab},
+        pdfpagemode=FullScreen,
+        }
+\usepackage{makecell} % allows for multilined content in cells
+\usepackage{multirow} % allows of cells using 
+\usepackage{tabularray}
+\UseTblrLibrary{varwidth}
+\UseTblrLibrary{diagbox} 
+\newcommand{\nl}{\\}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % a group of packages allowing for fancy math formatting including more symbols, math fonts, and things like proper matrix enviroments
+\usepackage{siunitx} % Formatting using SI units
+% Bibliography block
+\usepackage[nottoc]{tocbibind} % makes the bibliography section appear in table of contents
+\usepackage[english]{babel}
+\usepackage{url} % Proper formatting of web adresses
+\usepackage{cleveref}
+
+\definecolor{codegreen}{RGB}{0,128,19}
+\definecolor{codeblue}{RGB}{14,0,255}
+\definecolor{codepurple}{RGB}{167,9,245}
+\lstdefinestyle{matlabcode}{   
+ commentstyle=\color{codegreen},
+ keywordstyle=\color{codeblue},
+ numberstyle=\tiny\color{codegray},
+ stringstyle=\color{codepurple},
+ basicstyle=\footnotesize\ttfamily,
+ language=Matlab,
+ literate={-}{-}1 {*}{*}1 {"}{"}1,
+ showstringspaces=false,
+ columns=fullflexible,
+ keepspaces=true,
+ upquote=true,
+}
+
+\title{\noindent\rule{\textwidth}{1pt}\\ \Huge Subject Name\\ \noindent\rule{\textwidth}{1pt}  \large \\Type\\
+        \Large Subject\normalsize}
+
+
+\author{Name Surname (Index Number)}
+\date{Electrical Engineering 2026L\\\today}
+
+\begin{document}
+\fancyhead[LH]{Subject Name}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.6\linewidth]{./images/PW-logo}
+\end{figure}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+%Actual body of document starts
+%------------------------------------------------------------------------------------
+\part*{Introduction}
+    \input{introduction}
+\part*{Task}
+    \input{task}
+\part*{Conclusions}
+    \input{conclusions}
+\end{document}
