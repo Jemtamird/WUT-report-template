@@ -1,4 +1,4 @@
-# Electro-Heat Engineering
+# Using this report template
 What you will need to install:
 - git
 - a local latex editor (I use MiKTeX as a package manager and jetbrains IDE or TexStudio as an editor)
