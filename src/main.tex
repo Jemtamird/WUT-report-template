@@ -58,7 +58,6 @@
 \UseTblrLibrary{varwidth}
 \UseTblrLibrary{diagbox} 
 \newcommand{\nl}{\\}
-
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % a group of packages allowing for fancy math formatting including more symbols, math fonts, and things like proper matrix enviroments
 \usepackage{siunitx} % Formatting using SI units
 % Bibliography block
@@ -93,13 +92,16 @@
 
 \begin{document}
 \fancyhead[LH]{Subject Name}
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.6\linewidth]{./images/PW-logo}
-\end{figure}
-
-\maketitle
-\thispagestyle{empty}
+\begin{titlepage}
+    \raggedbottom
+    \begin{figure}[t!]
+        \centering
+        \includesvg[width=1\linewidth]{13}
+    \end{figure}
+    \vspace*{5cm}
+    \let\newpage\relax\maketitle
+    \thispagestyle{empty}
+\end{titlepage}
 \newpage
 \setcounter{page}{1}
 %Actual body of document starts
